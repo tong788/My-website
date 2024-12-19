@@ -1,6 +1,6 @@
-import Home from '../src/components/Home'
-import Profile from '../src/components/Profile'
-import Achievement from './components/Achievement'
+import Home from './pages/Home'
+import Profile from './pages/Profile'
+import Achievement from './pages/Achievement'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
