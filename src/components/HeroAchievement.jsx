@@ -1,5 +1,5 @@
 import pythoncertificate from "../assets/png/pythoncertificate.png";
-import WeCooked from "../assets/png/Wecooked.png";
+import WeCooked from "../assets/png/WeCooked.png";
 
 const HeroAchievement = () => {
 
