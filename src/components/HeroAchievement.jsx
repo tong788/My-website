@@ -9,9 +9,11 @@ const HeroAchievement = () => {
 
   return (
     <div className="font-mono mx-24 mt-12">
-      <div className="text-4xl font-bold mb-8">Achievement</div>
+      <div className="text-4xl font-bold mb-8 flex justify-center">
+        Achievement
+      </div>
       <div className="text-2xl font-semibold mb-4">My projects</div>
-      <p className="text-xl mb-4">WeCooked Project</p>
+      <p className="text-xl mb-4">WeCooked Project (In progress)</p>
       <div className="grid grid-cols-2">
         <div>
           <img src={WeCooked} />
@@ -36,7 +38,12 @@ const HeroAchievement = () => {
           <p className="text-xl mb-4">Python Certificate</p>
           <img src={pythoncertificate} />
         </div>
-        <div>{/** */}</div>
+        <div className="ml-8">
+          <p>
+            A certificate which ensured that I have completed the fundamental of Python for
+            data science such as Lists, dictionaries, loops, and implementation of external libraries.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -13,9 +13,9 @@ const ProgressBar = ({ bound }) => {
           clearInterval(interval); // Stop the interval when the target is reached
           return prev;
         }
-        return prev + 1; // Increment by 1%
+        return prev + 0.25; // Increment by 0.5%
       });
-    }, 25); // Adjust speed (lower = faster)
+    }, 10); // Adjust speed (lower = faster)
 
     return () => clearInterval(interval); // Clean up the interval
   }, [bound, progress]); // Re-run effect when `bound` or `progress` changes

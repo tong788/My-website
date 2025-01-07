@@ -14,11 +14,11 @@ import jira from "../assets/svg/jira.svg";
 
 const Skills = () => {
     return (
-      <div className="font-mono">
+      <div className="font-mono mt-16">
         <div className="flex justify-center text-4xl font-bold mb-16">
           Skills
         </div>
-        <div className="grid grid-cols-3 m-24 justify-center h-screen">
+        <div className="grid grid-cols-3 m-24 justify-center ">
           <div className="">
             <p className="text-2xl mb-6 text-center">Programming Languages</p>
             <div className="flex items-center justify-center mb-4">

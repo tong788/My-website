@@ -5,18 +5,18 @@ import kmutt from '../assets/png/kmutt.png'
 const Education = () => {
 
   return (
-    <div className="font-mono">
+    <div className="font-mono mx-32">
       <div className="flex text-4xl font-bold justify-center m-8">
         Education
       </div>
       <div className="mx-16">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="m-8 text-2xl font-semibold">
             Middle school
             <div className="text-xl font-normal mt-4">
-              Suankularb Wittayalai School <br />
-              Regular program <br />
-              GPAX - 3.99
+              <p>Suankularb Wittayalai School</p>
+              <p>Regular program</p>
+              <p>GPAX - 3.99</p>
             </div>
           </div>
           <div className="m-8">
@@ -28,13 +28,14 @@ const Education = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between">
+        <hr className="w-full border-gray-300" />
+        <div className="flex justify-between items-center">
           <div className="m-8 text-2xl font-semibold">
             High school
             <div className="text-xl font-normal mt-4">
-              Darunsikkhalai School (Engineering Science Classroom) <br />
-              Mathematic-Science branch <br />
-              GPAX - 3.61
+              <p>Darunsikkhalai School (Engineering Science Classroom)</p>
+              <p>Mathematic-Science program</p>
+              <p>GPAX - 3.61</p>
             </div>
           </div>
           <div className="m-8">
@@ -46,13 +47,14 @@ const Education = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between">
+        <hr className="w-full border-gray-300" />
+        <div className="flex justify-between items-center">
           <div className="m-8 text-2xl font-semibold">
             Bachelor degree
             <div className="text-xl font-normal mt-4">
-              Computer Engineering Department <br />
-              International program <br />
-              GPAX - 3.18
+              <p>Computer Engineering Department</p>
+              <p>International program</p>
+              <p>GPAX - 3.23</p>
             </div>
           </div>
           <div className="m-8">
@@ -64,9 +66,8 @@ const Education = () => {
             />
           </div>
         </div>
+        <hr className="w-full border-gray-300" />
       </div>
-
-      
     </div>
   );
 }
