@@ -1,12 +1,14 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import HeroProfile from '../components/HeroProfile'
+import Education from '../components/Education'
+import Skills from '../components/Skills'
 
 const Profile = () => {
   return (
     <div>
       <Navbar />
-      <HeroProfile />
+      <Education />
+      <Skills/>
       <Footer />
     </div>
   )
