@@ -50,7 +50,7 @@ const Education = () => {
         <hr className="w-full border-gray-300" />
         <div className="flex justify-between items-center">
           <div className="m-8 text-2xl font-semibold">
-            Bachelor degree
+            Bachelor degree (studying)
             <div className="text-xl font-normal mt-4">
               <p>Computer Engineering Department</p>
               <p>International program</p>

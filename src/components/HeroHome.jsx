@@ -1,7 +1,23 @@
 import mypic from "../assets/jpg/mypic.jpg";
 import { TypeAnimation } from "react-type-animation";
+import { useReducer } from "react";
 
 const HeroHome = () => {
+  const counterReducer = (state, action) => {
+    switch (action.type) {
+      case "Add":
+        return { ...state, count: state.count + 1 }; // Create a new state object
+      case "Sub":
+        return { ...state, count: state.count - 1 }; // Create a new state object
+      default:
+        return state; // Return the current state for unknown actions
+    }
+  };
+
+  const [state, dispatch] = useReducer(counterReducer, { count: 0 }); // Initial state is an object
+
+
+
   return (
     <div className="font-mono">
       <div className="flex justify-center font-bold pt-8 text-4xl">
@@ -46,7 +62,21 @@ const HeroHome = () => {
           Nice to meet you!
         </div>
       </div>
-      <div className=""></div>
+      <p className="flex justify-center mt-4">Count: {state.count}</p>
+      <div className="flex justify-center mt-4 gap-x-4">
+        <button
+          className="bg-indigo-500 rounded-xl w-24 h-8 text-white"
+          onClick={() => dispatch({ type: "Add" })}
+        >
+          Add
+        </button>
+        <button
+          className="bg-indigo-500 rounded-xl w-24 h-8 text-white"
+          onClick={() => dispatch({ type: "Sub" })}
+        >
+          Subtract
+        </button>
+      </div>
     </div>
   );
 };
