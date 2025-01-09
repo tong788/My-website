@@ -1,15 +1,17 @@
 import Navbar from '../components/Navbar'
-import HeroAchievement from '../components/HeroAchievement'
+import Projects from '../components/Projects'
+import Certificates from '../components/Certificates'
 import Footer from '../components/Footer'
 
 
 const Achievement = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <HeroAchievement />
+      <Projects />
+      <Certificates />
       <Footer />
-    </div>
-  )
+    </>
+  );
 }
 export default Achievement

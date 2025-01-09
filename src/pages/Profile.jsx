@@ -5,12 +5,12 @@ import Skills from '../components/Skills'
 
 const Profile = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Education />
       <Skills/>
       <Footer />
-    </div>
+    </>
   )
 }
 export default Profile

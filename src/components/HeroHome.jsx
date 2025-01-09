@@ -19,7 +19,7 @@ const HeroHome = () => {
             1000,
             "I am interested in Software Engineering",
             1000,
-            "I am interested in Frontend developer",
+            "I am interested in UX/UI design",
             1000,
           ]}
           wrapper="span"
