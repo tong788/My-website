@@ -1,0 +1,30 @@
+.progress-fill {
+  height: 100%;
+  background-color: red; /* Initial progress bar color */
+  width: 0%; /* Start at 0% width */
+  animation: progress var(--duration) linear forwards;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    background-color: red; 
+  }
+  
+  20% {
+    background-color: red; 
+  }
+
+  50% {
+    background-color: #f97316; 
+  }
+
+  75% {
+    background-color: #eab308; 
+  }
+
+  100% {
+    width: var(--bound); /* Final width */
+    background-color: #84cc16;
+  }
+}
