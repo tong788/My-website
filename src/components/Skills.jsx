@@ -19,8 +19,10 @@ const Skills = () => {
 
   //IntersectionObserver is an API which tells if an element is enter or exit viewport
   useEffect(() => {
+    const element = skillsRef.current; // Store the current value of skillsRef
+
     const observer = new IntersectionObserver(
-      ([entry]) => { //call back function to check if the component is in viewport or not
+      ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true); // Trigger animation when in view
         }
@@ -30,16 +32,17 @@ const Skills = () => {
       }
     );
 
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
+      if (element) {
+        observer.unobserve(element); // Unobserve the stored element
       }
     };
   }, []);
+
 
   return (
     <div ref={skillsRef} className="font-mono mt-16">
