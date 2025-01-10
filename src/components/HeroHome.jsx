@@ -25,23 +25,24 @@ const HeroHome = () => {
       </p>
 
       <div className="text-center pt-8 text-4xl">
-        <TypeAnimation
-          className="inline-block text-3xl"
-          sequence={[
-            // Same substring at the start will only be typed out once, initially
-            "I am interested in Web application",
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
-            "I am interested in Frontend development",
-            1000,
-            "I am interested in Software Engineering",
-            1000,
-            "I am interested in UX/UI design",
-            1000,
-          ]}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-        />
+        <div className="block text-3xl h-[3rem] md:h-[3rem]">
+          <TypeAnimation
+            className="block"
+            sequence={[
+              "I am interested in Web application",
+              1000,
+              "I am interested in Frontend development",
+              1000,
+              "I am interested in Software Engineering",
+              1000,
+              "I am interested in UX/UI design",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          />
+        </div>
       </div>
       <div className="md:grid grid-col-2 pt-10">
         <div className="flex justify-center md:block md:col-start-1 md:ml-20">
@@ -55,11 +56,10 @@ const HeroHome = () => {
           <p className="text-center md:text-start text-xl font-semibold mt-8 md:mt-0 pb-3">
             About me
           </p>
-          My name is Supanut Wongtanom. I am studying at the faculty
-          of computer engineering in the 3rd year of international
-          program at KMUTT at the moment. I am interested in front-end 
-          development especially React JS, NextJS and CSS tailwind framework.
-          Nice to meet you!
+          My name is Supanut Wongtanom. I am studying at the faculty of computer
+          engineering in the 3rd year of international program at KMUTT at the
+          moment. I am interested in front-end development especially React JS,
+          NextJS and CSS tailwind framework. Nice to meet you!
         </div>
       </div>
       <p className="flex justify-center mt-4">Count: {state.count}</p>
