@@ -1,6 +1,6 @@
 There is an available demo here!!
 https://supanutportfolio.netlify.app/
-It is not responsive however, it is still in progress. Please look forward to it!
+There is a responsive for mobile and tablet devices now!
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
