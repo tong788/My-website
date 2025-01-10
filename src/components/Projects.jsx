@@ -13,11 +13,11 @@ const Projects = () => {
         </div>
         <div className="text-2xl font-semibold mb-4">My projects</div>
         <p className="text-xl mb-4">WeCooked Project (In progress)</p>
-        <div className="grid grid-cols-2">
+        <div className="md:grid md:grid-cols-2">
           <div>
             <img src={WeCooked} />
           </div>
-          <div className="ml-8">
+          <div className="md:ml-8 mt-4 md:mt-0">
             <p>
               A platform that empowers users to learn and enhance their culinary
               skills from the comfort of their own home. I have worked as a
