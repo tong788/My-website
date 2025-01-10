@@ -49,7 +49,7 @@ const Skills = () => {
       <div className="text-center text-4xl font-bold mb-16">Skills</div>
       <div className="md:grid md:grid-cols-3 md:m-24 mx-8 justify-center ">
         <div>
-          <p className="text-2xl mb-6 text-center">Programming Languages</p>
+          <p className="text-2xl mb-6 text-center">Programming</p>
           <div className="flex items-center justify-center mb-4">
             <img src={html} className="w-24" alt="HTML" />
             <ProgressBar bound={85} isInView={isInView} />
