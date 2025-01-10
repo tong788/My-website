@@ -28,7 +28,7 @@ const Skills = () => {
         }
       },
       {
-        threshold: 0.5, // Trigger when 50% of the component is visible
+        threshold: 0.2, // Trigger when 50% of the component is visible
       }
     );
 
@@ -46,8 +46,8 @@ const Skills = () => {
 
   return (
     <div ref={skillsRef} className="font-mono mt-16">
-      <div className="flex justify-center text-4xl font-bold mb-16">Skills</div>
-      <div className="grid grid-cols-3 m-24 justify-center ">
+      <div className="text-center text-4xl font-bold mb-16">Skills</div>
+      <div className="md:grid md:grid-cols-3 md:m-24 mx-8 justify-center ">
         <div>
           <p className="text-2xl mb-6 text-center">Programming Languages</p>
           <div className="flex items-center justify-center mb-4">

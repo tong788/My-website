@@ -6,9 +6,9 @@ const Education = () => {
 
   return (
     <div className="font-mono mx-32">
-      <div className="flex text-4xl font-bold justify-center m-8">
+      <p className="text-center text-4xl font-bold my-8">
         Education
-      </div>
+      </p>
       <div className="mx-16">
         <div className="flex justify-between items-center">
           <div className="m-8 text-2xl font-semibold">
