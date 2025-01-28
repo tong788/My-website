@@ -1,10 +1,7 @@
 import WeCooked from "../assets/png/WeCooked.png";
+import myPokedex from "../assets/png/myPokedex.png"
 
 const Projects = () => {
-
-    const navigate = () => {
-      window.location.href = "https://github.com/tong788/WeCooked-Frontend";
-    };
 
     return (
       <div className="font-mono mx-24 mt-12">
@@ -12,7 +9,7 @@ const Projects = () => {
           Achievement
         </div>
         <div className="text-2xl font-semibold mb-4">My projects</div>
-        <p className="text-xl mb-4">WeCooked Project (In progress)</p>
+        <p className="text-xl mb-4">WeCooked Project</p>
         <div className="md:grid md:grid-cols-2">
           <div>
             <img src={WeCooked} />
@@ -25,7 +22,30 @@ const Projects = () => {
             </p>
             <button
               className="flex items-center justify-center w-24 h-8 bg-gradient-to-b from-indigo-400 to-indigo-600 rounded-xl text-white mt-2 hover:shadow-lg duration-300"
-              onClick={navigate}
+              onClick={() =>
+                window.open(
+                  "https://github.com/tong788/WeCooked-Frontend",
+                  "_blank"
+                )
+              }
+            >
+              See More
+            </button>
+          </div>
+
+          <p className="text-xl mb-4 col-span-2 mt-4">My Pokedex Project</p>
+          <div>
+            <img src={myPokedex} />
+          </div>
+          <div className="md:ml-8 mt-4 md:mt-0">
+            <p>
+              A cloned pokedex as a web application with additional function like favourite pokemon.
+            </p>
+            <button
+              className="flex items-center justify-center w-24 h-8 bg-gradient-to-b from-indigo-400 to-indigo-600 rounded-xl text-white mt-2 hover:shadow-lg duration-300"
+              onClick={() =>
+                window.open("https://github.com/tong788/MyPokedex", "_blank")
+              }
             >
               See More
             </button>
