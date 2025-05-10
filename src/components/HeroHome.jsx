@@ -4,22 +4,16 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroHome = () => {
 
-  const transcriptUrl = "http://localhost:5173/transcript_SupanutWongtanom.pdf";
-  const CvUrl = "http://localhost:5173/CV_SupanutWongtanom.pdf";
+  const transcriptUrl = "/transcript_SupanutWongtanom.pdf";
+  const CvUrl = "/CV_SupanutWongtanom.pdf";
 
   const downloadFileAtUrl = (url) => {
-    fetch(url)
-      .then((res) => res.blob())
-      .then((blob) => {
-        const blobURL = window.URL.createObjectURL(blob);
-        const fileName = url.split("/").pop();
-        const aTag = document.createElement("a");
-        aTag.href = blobURL;
-        aTag.setAttribute("download", fileName);
-        document.body.appendChild(aTag);
-        aTag.click();
-        aTag.remove();
-      });
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", url.split("/").pop() || "file");
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
   };
   
 
@@ -72,17 +66,13 @@ const HeroHome = () => {
       <div className="flex justify-center mt-4 gap-x-8">
         <button
           className="bg-indigo-500 rounded-xl w-32 h-8 text-white hover:opacity-90 duration-100"
-          onClick={() => {
-            downloadFileAtUrl(transcriptUrl);
-          }}
+          onClick={() => downloadFileAtUrl(transcriptUrl)}
         >
           transcript
         </button>
         <button
           className="bg-indigo-500 rounded-xl w-32 h-8 text-white hover:opacity-90 duration-100"
-          onClick={() => {
-            downloadFileAtUrl(CvUrl);
-          }}
+          onClick={() => downloadFileAtUrl(CvUrl)}
         >
           CV
         </button>
