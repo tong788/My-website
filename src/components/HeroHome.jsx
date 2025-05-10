@@ -1,21 +1,27 @@
 import mypic from "../assets/jpg/mypic.jpg";
 import { TypeAnimation } from "react-type-animation";
-import { useReducer } from "react";
+
 
 const HeroHome = () => {
-  const counterReducer = (state, action) => {
-    switch (action.type) {
-      case "Add":
-        return { ...state, count: state.count + 1 }; // Create a new state object
-      case "Sub":
-        return { ...state, count: state.count - 1 }; // Create a new state object
-      default:
-        return state; // Return the current state for unknown actions
-    }
+
+  const transcriptUrl = "http://localhost:5173/transcript_SupanutWongtanom.pdf";
+  const CvUrl = "http://localhost:5173/CV_SupanutWongtanom.pdf";
+
+  const downloadFileAtUrl = (url) => {
+    fetch(url)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const blobURL = window.URL.createObjectURL(blob);
+        const fileName = url.split("/").pop();
+        const aTag = document.createElement("a");
+        aTag.href = blobURL;
+        aTag.setAttribute("download", fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+      });
   };
-
-  const [state, dispatch] = useReducer(counterReducer, { count: 0 }); // Initial state is an object
-
+  
 
 
   return (
@@ -62,19 +68,23 @@ const HeroHome = () => {
           NextJS and CSS tailwind framework. Nice to meet you!
         </div>
       </div>
-      <p className="flex justify-center mt-4">Count: {state.count}</p>
-      <div className="flex justify-center mt-4 gap-x-4">
+      <p className="flex justify-center mt-4">You can download and see my</p>
+      <div className="flex justify-center mt-4 gap-x-8">
         <button
-          className="bg-indigo-500 rounded-xl w-24 h-8 text-white"
-          onClick={() => dispatch({ type: "Add" })}
+          className="bg-indigo-500 rounded-xl w-32 h-8 text-white hover:opacity-90 duration-100"
+          onClick={() => {
+            downloadFileAtUrl(transcriptUrl);
+          }}
         >
-          Add
+          transcript
         </button>
         <button
-          className="bg-indigo-500 rounded-xl w-24 h-8 text-white"
-          onClick={() => dispatch({ type: "Sub" })}
+          className="bg-indigo-500 rounded-xl w-32 h-8 text-white hover:opacity-90 duration-100"
+          onClick={() => {
+            downloadFileAtUrl(CvUrl);
+          }}
         >
-          Subtract
+          CV
         </button>
       </div>
     </div>
