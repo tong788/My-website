@@ -1,38 +1,47 @@
-import suankularb from "../assets/png/suankularb.png";
-import darunsikkhalai from "../assets/png/darunsikkhalai.png";
-import kmutt from "../assets/png/kmutt.png";
+import suankularb from '../assets/png/suankularb.png'
+import darunsikkhalai from '../assets/png/darunsikkhalai.png'
+import kmutt from '../assets/png/kmutt.png'
 
-const Education = () => {
-  const educationData = [
+interface EducationItem {
+  id: number
+  level: string
+  school: string
+  details: string[]
+  image: string
+  alt: string
+}
+
+const Education: React.FC = () => {
+  const educationData: EducationItem[] = [
     {
       id: 1,
-      level: "Middle school",
-      school: "Suankularb Wittayalai School",
-      details: ["Regular program", "GPAX - 3.99"],
+      level: 'Middle school',
+      school: 'Suankularb Wittayalai School',
+      details: ['Regular program', 'GPAX - 3.99'],
       image: suankularb,
-      alt: "Suankularb Wittayalai",
+      alt: 'Suankularb Wittayalai',
     },
     {
       id: 2,
-      level: "High school",
-      school: "Darunsikkhalai School",
+      level: 'High school',
+      school: 'Darunsikkhalai School',
       details: [
-        "(Engineering Science Classroom)",
-        "Mathematic-Science program",
-        "GPAX - 3.61",
+        '(Engineering Science Classroom)',
+        'Mathematic-Science program',
+        'GPAX - 3.61',
       ],
       image: darunsikkhalai,
-      alt: "Darunsikkhalai",
+      alt: 'Darunsikkhalai',
     },
     {
       id: 3,
-      level: "Bachelor degree (studying)",
-      school: "Computer Engineering Department",
-      details: ["International program", "GPAX - 3.23"],
+      level: 'Bachelor degree (studying)',
+      school: 'Computer Engineering Department',
+      details: ['International program', 'GPAX - 3.23'],
       image: kmutt,
-      alt: "KMUTT",
+      alt: 'KMUTT',
     },
-  ];
+  ]
 
   return (
     <div className="font-mono">
@@ -90,7 +99,7 @@ const Education = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Education;
+export default Education

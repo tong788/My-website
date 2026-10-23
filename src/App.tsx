@@ -3,7 +3,7 @@ import Profile from './pages/Profile'
 import Achievement from './pages/Achievement'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <BrowserRouter>

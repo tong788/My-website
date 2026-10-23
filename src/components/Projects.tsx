@@ -1,7 +1,8 @@
-import WeCooked from "../assets/png/WeCooked.png";
-import myPokedex from "../assets/png/myPokedex.png";
-import ClonedYwc20th from "../assets/png/ClonedYwc20th.png";
-const Projects = () => {
+import WeCooked from '../assets/png/WeCooked.png'
+import myPokedex from '../assets/png/myPokedex.png'
+import ClonedYwc20th from '../assets/png/ClonedYwc20th.png'
+
+const Projects: React.FC = () => {
   return (
     <div className="font-mono mx-24 mt-12">
       <div className="text-4xl font-bold mb-8 flex justify-center">
@@ -23,8 +24,8 @@ const Projects = () => {
             className="flex items-center justify-center w-24 h-8 bg-gradient-to-b from-indigo-400 to-indigo-600 rounded-xl text-white mt-2 hover:shadow-lg duration-300"
             onClick={() =>
               window.open(
-                "https://github.com/tong788/WeCooked-Frontend",
-                "_blank"
+                'https://github.com/tong788/WeCooked-Frontend',
+                '_blank'
               )
             }
           >
@@ -44,7 +45,7 @@ const Projects = () => {
           <button
             className="flex items-center justify-center w-24 h-8 bg-gradient-to-b from-indigo-400 to-indigo-600 rounded-xl text-white mt-2 hover:shadow-lg duration-300"
             onClick={() =>
-              window.open("https://github.com/tong788/MyPokedex", "_blank")
+              window.open('https://github.com/tong788/MyPokedex', '_blank')
             }
           >
             See More
@@ -62,7 +63,7 @@ const Projects = () => {
           <button
             className="flex items-center justify-center w-24 h-8 bg-gradient-to-b from-indigo-400 to-indigo-600 rounded-xl text-white mt-2 hover:shadow-lg duration-300"
             onClick={() =>
-              window.open("https://github.com/tong788/YWC20th-clone", "_blank")
+              window.open('https://github.com/tong788/YWC20th-clone', '_blank')
             }
           >
             See More
@@ -70,7 +71,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

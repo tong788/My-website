@@ -3,14 +3,15 @@ import Footer from '../components/Footer'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
 
-const Profile = () => {
+const Profile: React.FC = () => {
   return (
     <>
       <Navbar />
       <Education />
-      <Skills/>
+      <Skills />
       <Footer />
     </>
   )
 }
+
 export default Profile

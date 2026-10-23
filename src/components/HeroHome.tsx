@@ -1,22 +1,18 @@
-import mypic from "../assets/jpg/mypic.jpg";
-import { TypeAnimation } from "react-type-animation";
+import mypic from '../assets/jpg/mypic.jpg'
+import { TypeAnimation } from 'react-type-animation'
 
+const HeroHome: React.FC = () => {
+  const transcriptUrl: string = '/transcript_SupanutWongtanom.pdf'
+  const CvUrl: string = '/CV_SupanutWongtanom.pdf'
 
-const HeroHome = () => {
-
-  const transcriptUrl = "/transcript_SupanutWongtanom.pdf";
-  const CvUrl = "/CV_SupanutWongtanom.pdf";
-
-  const downloadFileAtUrl = (url) => {
-    const aTag = document.createElement("a");
-    aTag.href = url;
-    aTag.setAttribute("download", url.split("/").pop() || "file");
-    document.body.appendChild(aTag);
-    aTag.click();
-    aTag.remove();
-  };
-  
-
+  const downloadFileAtUrl = (url: string): void => {
+    const aTag = document.createElement('a')
+    aTag.href = url
+    aTag.setAttribute('download', url.split('/').pop() || 'file')
+    document.body.appendChild(aTag)
+    aTag.click()
+    aTag.remove()
+  }
 
   return (
     <div className="font-mono">
@@ -29,13 +25,13 @@ const HeroHome = () => {
           <TypeAnimation
             className="block"
             sequence={[
-              "I am interested in Web application",
+              'I am interested in Web application',
               1000,
-              "I am interested in Frontend development",
+              'I am interested in Frontend development',
               1000,
-              "I am interested in Software Engineering",
+              'I am interested in Software Engineering',
               1000,
-              "I am interested in UX/UI design",
+              'I am interested in UX/UI design',
               1000,
             ]}
             wrapper="span"
@@ -78,7 +74,7 @@ const HeroHome = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroHome;
+export default HeroHome

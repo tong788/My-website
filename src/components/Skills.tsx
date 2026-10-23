@@ -1,48 +1,47 @@
-import { useEffect, useRef, useState } from "react";
-import ProgressBar from "./ProgressBar";
+import { useEffect, useRef, useState } from 'react'
+import ProgressBar from './ProgressBar'
 
-import html from "../assets/svg/html.svg";
-import css from "../assets/svg/css.svg";
-import javascript from "../assets/svg/js.svg";
-import typescript from "../assets/svg/typescript.svg";
-import react from "../assets/svg/react-native.svg";
-import tailwind from "../assets/svg/tailwindcss.svg";
-import nextjs from "../assets/svg/nextjs.svg";
-import python from "../assets/svg/python.svg";
-import c from "../assets/svg/c.svg";
-import figma from "../assets/svg/figma.svg";
-import jira from "../assets/svg/jira.svg";
+import html from '../assets/svg/html.svg'
+import css from '../assets/svg/css.svg'
+import javascript from '../assets/svg/js.svg'
+import typescript from '../assets/svg/typescript.svg'
+import reactIcon from '../assets/svg/react-native.svg'
+import tailwind from '../assets/svg/tailwindcss.svg'
+import nextjs from '../assets/svg/nextjs.svg'
+import python from '../assets/svg/python.svg'
+import c from '../assets/svg/c.svg'
+import figma from '../assets/svg/figma.svg'
+import jira from '../assets/svg/jira.svg'
 
-const Skills = () => {
-  const [isInView, setIsInView] = useState(false);
-  const skillsRef = useRef(); //to create reference to a dom (skills component)
+const Skills: React.FC = () => {
+  const [isInView, setIsInView] = useState<boolean>(false)
+  const skillsRef = useRef<HTMLDivElement>(null)
 
   //IntersectionObserver is an API which tells if an element is enter or exit viewport
   useEffect(() => {
-    const element = skillsRef.current; // Store the current value of skillsRef
+    const element = skillsRef.current
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true); // Trigger animation when in view
+          setIsInView(true)
         }
       },
       {
-        threshold: 0.2, // Trigger when 50% of the component is visible
+        threshold: 0.2,
       }
-    );
+    )
 
     if (element) {
-      observer.observe(element);
+      observer.observe(element)
     }
 
     return () => {
       if (element) {
-        observer.unobserve(element); // Unobserve the stored element
+        observer.unobserve(element)
       }
-    };
-  }, []);
-
+    }
+  }, [])
 
   return (
     <div ref={skillsRef} className="font-mono mt-16">
@@ -78,7 +77,7 @@ const Skills = () => {
         <div>
           <p className="text-2xl mb-6 text-center">Frameworks</p>
           <div className="flex items-center justify-center mb-4">
-            <img src={react} className="w-24" alt="React" />
+            <img src={reactIcon} className="w-24" alt="React" />
             <ProgressBar bound={75} isInView={isInView} />
           </div>
           <div className="flex items-center justify-center mb-4">
@@ -103,7 +102,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

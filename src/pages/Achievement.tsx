@@ -3,8 +3,7 @@ import Projects from '../components/Projects'
 import Certificates from '../components/Certificates'
 import Footer from '../components/Footer'
 
-
-const Achievement = () => {
+const Achievement: React.FC = () => {
   return (
     <>
       <Navbar />
@@ -12,6 +11,7 @@ const Achievement = () => {
       <Certificates />
       <Footer />
     </>
-  );
+  )
 }
+
 export default Achievement
