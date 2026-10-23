@@ -1,8 +1,8 @@
-import ig from '../assets/svg/instagram.svg'
-import fb from '../assets/svg/facebook.svg'
-import gmail from '../assets/svg/gmail.svg'
-import phone from '../assets/svg/phone.svg'
-import gh from '../assets/svg/github.svg'
+import ig from "../assets/svg/instagram.svg";
+import fb from "../assets/svg/facebook.svg";
+import gmail from "../assets/svg/gmail.svg";
+import phone from "../assets/svg/phone.svg";
+import gh from "../assets/svg/github.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="pt-6 pl-10 pb-6 text-xl font-bold">
         <div className="flex items-center gap-x-2">
           <img className="" src={phone} />
-          <ul className="">0615325744</ul>
+          <ul className="">0838902961</ul>
         </div>
 
         <div className="flex items-center gap-x-2">
@@ -36,13 +36,17 @@ const Footer: React.FC = () => {
 
         <div className="flex items-center gap-x-2">
           <a href="https://github.com/tong788">
-            <img className="cursor-pointer hover:shadow-md" src={gh} alt="Github" />
+            <img
+              className="cursor-pointer hover:shadow-md"
+              src={gh}
+              alt="Github"
+            />
           </a>
           <ul className="">tong788</ul>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
