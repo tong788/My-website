@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-website
+  labels:
+    app: my-website
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-website
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

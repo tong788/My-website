@@ -1,0 +1,34 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: my-website
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-website
+  minReplicas: 2
+  maxReplicas: 10
+  behavior:
+    # scale up for double after validating for 60 secs
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+        - type: Percent
+          value: 100 # not always scale up for 100% but it is just a ceiling for 60 secs period to scale up
+          periodSeconds: 60
+    # scale down for half after validating for 60 secs
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies:
+        - type: Percent
+          value: 50
+          periodSeconds: 60 # atleast 60 secs to scale not exact number for ref
+  # If the utilization goes above 50% of the requested CPU then scale
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
